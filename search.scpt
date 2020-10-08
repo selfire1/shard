@@ -1,5 +1,7 @@
 -- Edit the path right here so it works for your system:
 set chosenFolder to "Macintosh HD:Users:Path:to:Vault" as alias
+-- Enter the name of your vault
+set vaultName to "Vault"
 
 tell application "Finder"
 	set file_list to name of every file of entire contents of chosenFolder
@@ -15,7 +17,7 @@ end if
 set theChosenFile to encodeText((theChosenFile as string), true, false)
 
 
-do shell script "open obsidian://vault/Vault/" & theChosenFile
+do shell script "open obsidian://vault/ & vaultName & "/" & theChosenFile
 
 on encodeText(theText, encodeCommonSpecialCharacters, encodeExtendedSpecialCharacters)
 	set theStandardCharacters to "abcdefghijklmnopqrstuvwxyz0123456789"
