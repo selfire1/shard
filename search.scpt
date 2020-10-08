@@ -1,4 +1,5 @@
-set chosenFolder to "Macintosh HD:Users:Joschua:Dropbox:Vault" as alias
+-- Edit the path right here so it works for your system:
+set chosenFolder to "Macintosh HD:Users:Path:to:Vault" as alias
 
 tell application "Finder"
 	set file_list to name of every file of entire contents of chosenFolder
