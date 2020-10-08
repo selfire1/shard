@@ -1,23 +1,25 @@
--- Edit the path right here so it works for your system:
-set chosenFolder to "Macintosh HD:Users:Path:to:Vault" as alias
--- Enter the name of your vault
-set vaultName to "Vault"
+-- Edit the path to your vault:
+set chosenFolder to "Macintosh HD:Users:Path:to:your:Vault" as alias
+
+-- Enter the name of your vault:
+set vaultName to "YourVaultName"
 
 tell application "Finder"
 	set file_list to name of every file of entire contents of chosenFolder
 end tell
 
 
-set theChosenFile to choose from list file_list with prompt "Select your file:" default items {"000 Index.md"}
+set theChosenFile to choose from list file_list with prompt "Select your file:" default items {"Start here.md"}
 if the theChosenFile is false then
 	error number -128
 end if
 
 
 set theChosenFile to encodeText((theChosenFile as string), true, false)
+set vaultName to encodeText((vaultName as string), true, false)
 
 
-do shell script "open obsidian://vault/ & vaultName & "/" & theChosenFile
+do shell script "open obsidian://vault/" & vaultName & "/" & theChosenFile
 
 on encodeText(theText, encodeCommonSpecialCharacters, encodeExtendedSpecialCharacters)
 	set theStandardCharacters to "abcdefghijklmnopqrstuvwxyz0123456789"
