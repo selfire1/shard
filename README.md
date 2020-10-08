@@ -8,7 +8,7 @@ This AppleScript-based solution is rather messy still but works so far. If possi
 ⚠️ **Limitations:** This version only work in one folder. It does not search sub-folders (yet).
 
 ## Setting up the Script
-Download the AppleSctip from [just above](https://github.com/selfire1/shard/blob/main/search.scpt).
+Download the AppleScript from [just above](https://github.com/selfire1/shard/blob/main/search.scpt).
 
 In the first couple of lines there is minor personalisation required:
 * Edit this path to point to your Obsidian Vault: `set chosenFolder to "Macintosh HD:Users:Path:to:Vault" as alias`
