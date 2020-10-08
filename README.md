@@ -1,5 +1,9 @@
 # Shard: Search Obsidian OS-wide 🔎
-A messy way to search [Obsidian](obsidian.md) from anywhere in your OS. This AppleScript-based solution is rather messy still but works so far. If possible for me I intend to make it work a bit smoother in the future.
+A messy way to search [Obsidian](obsidian.md) from anywhere in your OS. 
+
+<img src="https://i.imgur.com/ENbE2ER.png" width="500">
+
+This AppleScript-based solution is rather messy still but works so far. If possible for me I intend to make it work a bit smoother in the future.
 
 ⚠️ **Limitations:** This version only work in one folder. It does not search sub-folders (yet).
 
